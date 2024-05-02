@@ -9,7 +9,7 @@ const ListadoLibros = () => {
         {Array.isArray(biblioteca.libros) && biblioteca.libros.length
           ? biblioteca.libros.map((datos_libro) => {
               // Se crea un nuevo objeto JSON con los datos del libro
-              const libro = {
+              /*const libro = {
                 id: datos_libro.id,
                 titulo: datos_libro.titulo,
                 autor: datos_libro.autor,
@@ -20,7 +20,8 @@ const ListadoLibros = () => {
               };
   
               // Se pasa el objeto JSON al componente <Libro>
-              return <Libro key={datos_libro.id} libro={libro} />;
+              return <Libro key={datos_libro.id} libro={libro} />;*/
+              return <Libro key={datos_libro.id} libro={datos_libro} />;
             })
           : "No se han encontrado libros."}
       </Fragment>
