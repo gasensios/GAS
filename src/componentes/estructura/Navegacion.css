@@ -22,8 +22,8 @@
 }
 
 .menu__link:hover {
-    background-color: var(--primary-color);
-    color: var(--menu-color);
+    background-color: grey;
+    color: white;
 } 
 
 .menu__link--activo {

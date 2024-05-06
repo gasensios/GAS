@@ -10,7 +10,7 @@ const Libro = (props) => {
   
     return (
       <Fragment>
-        <article id={id ? id : crypto.randomUUID()} className='libro'>
+        <article id={id ? id : crypto.randomUUID()} className='libro libro__link'>
           <img className='libro__portada'
             src={portada ? portada : sin_portada}
             width="150"

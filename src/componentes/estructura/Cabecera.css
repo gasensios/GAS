@@ -1,11 +1,12 @@
-.header {
+.cabecera {
     padding: 50px 0px 20px;
     width: var(--default-size);
     margin: 0 auto;
 }
 
-.header__title {
+.cabecera__titulo {
     font-size: 3rem;
+    font-family: algerian, sans-serif;
 }
 
 
