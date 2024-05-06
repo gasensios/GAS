@@ -1,11 +1,11 @@
 .libros_listado {
-    display: flex; /* Enable flexbox mode for the list container */
-    flex-direction: row; /* Set the direction of items to row (horizontal) */
-    flex-wrap: wrap; /* Allow items to wrap into multiple rows if needed */
-    justify-content: space-around; /* Distribute items with space around */
-    align-items: baseline; /* Align items vertically in the center */
-    padding: 20px; /* Add some padding around the list items */
-    border: 1px solid #ccc; /* Add a subtle border around the list container */
-    border-radius: 5px; /* Round the corners of the list container */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the list container */
+    display: flex; /* Activar flexbox mode para la lista */
+    flex-direction: row; /* Establecer la dirección de los objetos (horizontal) */
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias filas */
+    justify-content: space-around;
+    align-items: baseline; /* Alinear elementos verticalmente en el centro */
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
