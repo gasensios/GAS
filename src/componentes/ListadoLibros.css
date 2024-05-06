@@ -1,0 +1,10 @@
+.listadolibro__contenido {
+    padding: 10px;
+    width: 150px;
+    }
+    .listadolibro__titulo {
+    margin: 5px 0;
+    }
+    .listadolibro__autor {
+    font-weight: bold;
+}
