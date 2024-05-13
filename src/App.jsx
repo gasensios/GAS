@@ -1,7 +1,5 @@
 import React, { Fragment } from "react";
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import ListadoLibros from "./componentes/ListadoLibros.jsx";
+import { BrowserRouter } from "react-router-dom";
 import Cabecera from "./componentes/estructura/Cabecera.jsx";
 import Navegacion from "./componentes/estructura/Navegacion.jsx";
 import Contenido from "./componentes/estructura/Contenido.jsx";
@@ -11,10 +9,12 @@ import './App.css';
 const App = () => {
   return (
     <>
-      <Cabecera />
-      <Navegacion />
-      <Contenido />
-      <PiePagina />
+      <BrowserRouter>
+        <Cabecera />
+        <Navegacion />
+        <Contenido />
+        <PiePagina />
+      </BrowserRouter>
     </>
   );
 }
