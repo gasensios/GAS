@@ -5,7 +5,7 @@ import './ListadoLibros.css'
 
 const ListadoLibros = () => {
     return (
-      <div className="libros_listado">
+      <div className="libros__listado">
         <Fragment>
             {Array.isArray(biblioteca.libros) && biblioteca.libros.length
               ? biblioteca.libros.map((datos_libro) => {

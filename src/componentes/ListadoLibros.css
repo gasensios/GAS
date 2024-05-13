@@ -1,4 +1,4 @@
-.libros_listado {
+.libros__listado {
     display: flex; /* Activar flexbox mode para la lista */
     flex-direction: row; /* Establecer la dirección de los objetos (horizontal) */
     flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias filas */
