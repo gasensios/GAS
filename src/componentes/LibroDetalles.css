@@ -1,0 +1,79 @@
+.librodet__contenido {
+    padding: 10px;
+    width: 150px;
+    }
+    .imagen-texto-contenedor {
+        display: flex;
+        margin: 20px;
+    }
+    .imagen-texto-wrapper {
+        display: flex;
+    }
+    .librodet__portada {
+        display: flex;
+        width: 400px;
+        height: 400px;
+        padding: 0px 15px;
+    }
+    .librodet__titulo {
+    flex: 1;
+    font-size: 32px;
+    }
+    .librodet__autor {
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+    }
+    .librodet__completado {
+        font-weight: bold;
+        font-size: 24px;
+    }
+    .librodet__completado--true {
+        color: green;
+    }
+    .librodet__completado--false {
+        color: red;
+    }
+    .librodet__sinopsis {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 2;
+        }
+    .librodet__link {
+        padding: 5px 10px;
+        color: var(--primary-color);
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .librodet__link:hover {
+        background-color: grey;
+        color: white;
+    } 
+    .librodet__link--activo {
+        background-color: var(--primary-color);
+        color: var(--menu-color);
+    }
+
+    .boton {
+        border: none;
+        box-sizing: border-box;
+        padding: 15px 20px;
+        font-family: var(--current-font);
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 0 20px 0 0;
+        align-self: center;
+        color: var(--secondary-color);
+    }
+    
+    .boton:hover, .boton:active {
+        transform: scale(0.98); 
+        box-shadow: inset 3px 2px 22px 1px rgba(0, 0, 0, 0.3); 
+    }
+
+    .boton--cancelar {
+        background-color: var(--primary-color);
+    }
+    .boton--volver {
+        background-color: var(--primary-color);
+    }

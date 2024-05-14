@@ -4,7 +4,7 @@
     flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias filas */
     justify-content: space-around;
     align-items: baseline; /* Alinear elementos verticalmente en el centro */
-    padding: 20px; 
+    padding: 15px; 
     border: 1px solid #ccc; 
     border-radius: 5px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
