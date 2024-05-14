@@ -1,0 +1,11 @@
+.libros__listado {
+    display: flex; /* Activar flexbox mode para la lista */
+    flex-direction: row; /* Establecer la dirección de los objetos (horizontal) */
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias filas */
+    justify-content: space-around;
+    align-items: baseline; /* Alinear elementos verticalmente en el centro */
+    padding: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

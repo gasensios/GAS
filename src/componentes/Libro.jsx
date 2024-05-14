@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import sin_portada from "../assets/img/sin_portada.png";
+import './Libro.css'
 
 const Libro = (props) => {
     // Se cambia la firma del componente para recibir un solo objeto como parámetro
@@ -9,14 +10,18 @@ const Libro = (props) => {
   
     return (
       <Fragment>
-        {/* ... resto del código del componente, utilizando las propiedades desestructuradas */}
-        <img
-          width="150px" height="225px" src={portada ? portada : sin_portada}
-        />
-        <div>{titulo ? titulo : "No se ha especificado título."}</div>
-        <div>{autor ? autor : "No se ha especificado autor."}</div>
-        <div>{sinopsis ? sinopsis: "No se ha especificado sipnosis."}</div>
-        {/* ... resto del código del componente, utilizando las propiedades desestructuradas */}
+        <article id={id ? id : crypto.randomUUID()} className='libro libro__link'>
+          <img className='libro__portada'
+            src={portada ? portada : sin_portada}
+            width="150"
+          ></img>
+          <div className='libro__titulo'>
+            {titulo ? titulo : "No se ha especificado título."}
+          </div>
+          <div className='libro__autor'>
+            {autor ? autor : "No se ha especificado autor."}
+          </div>
+        </article>
       </Fragment>
     );
   };

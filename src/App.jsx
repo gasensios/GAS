@@ -1,17 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import ListadoLibros from './componentes/ListadoLibros.jsx';
+import React, { Fragment } from "react";
+import { BrowserRouter } from "react-router-dom";
+import Cabecera from "./componentes/estructura/Cabecera.jsx";
+import Navegacion from "./componentes/estructura/Navegacion.jsx";
+import Contenido from "./componentes/estructura/Contenido.jsx";
+import PiePagina from "./componentes/estructura/PiePagina.jsx";
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
     <>
-      <ListadoLibros/>
+      <BrowserRouter>
+        <Cabecera />
+        <Navegacion />
+        <Contenido />
+        <PiePagina />
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

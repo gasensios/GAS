@@ -1,0 +1,14 @@
+.pie {
+    background-color: var(--menu-color);
+    padding: 20px 10px;
+}
+
+.pie__texto {
+    padding: 10px 300px;
+    text-align: center;
+    background-color: gray;
+    color: white;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
