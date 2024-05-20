@@ -5,9 +5,10 @@ import './Libro.css'
 const Libro = (props) => {
     // Se cambia la firma del componente para recibir un solo objeto como parámetro
     const { libro } = props;
+
     // Se desestructuran las propiedades del objeto JSON
     const { id, titulo, autor, portada, completado, sinopsis } = libro;
-  
+
     return (
       <Fragment>
         <article id={id ? id : crypto.randomUUID()} className='libro libro__link'>

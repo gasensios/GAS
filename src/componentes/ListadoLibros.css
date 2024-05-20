@@ -9,3 +9,23 @@
     border-radius: 5px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.boton {
+    border: none;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    font-family: var(--current-font);
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 20px 0 0;
+    align-self: center;
+    color: var(--secondary-color);
+}
+.boton:hover, .boton:active {
+    transform: scale(0.98); 
+    box-shadow: inset 3px 2px 22px 1px rgba(0, 0, 0, 0.3); 
+}
+.boton--aceptar {
+    background-color: var(--primary-color);
+    margin-top: 90px;
+}
