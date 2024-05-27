@@ -72,7 +72,7 @@
     }
 
     .boton--cancelar {
-        background-color: var(--primary-color);
+        background-color: red;
         margin-top: 90px;
     }
     .boton--volver {

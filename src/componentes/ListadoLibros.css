@@ -25,7 +25,17 @@
     transform: scale(0.98); 
     box-shadow: inset 3px 2px 22px 1px rgba(0, 0, 0, 0.3); 
 }
-.boton--aceptar {
+.boton--cargar {
+    background-color: green;
+    margin-top: 90px;
+}
+
+.boton--borrar {
+    background-color: red;
+    margin-top: 90px;
+}
+
+.boton--insertar {
     background-color: var(--primary-color);
     margin-top: 90px;
 }

@@ -1,20 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext, useState, useEffect } from "react";
+import { contextoBiblioteca } from "../contextos/ProveedorLibros.jsx";
 import './ListadoResumen.css'
 
-const ListadoResumen = (props) => {
-
-    const { resumen } = props;
-
+const ListadoResumen = () => {
+    const { biblioteca2 } = useContext(contextoBiblioteca);
     const [cantidad, setCantidad] = useState([]);
 
     const contarLibros = () => {
-        setCantidad(resumen.length);
+        setCantidad(biblioteca2.length);
       };
     
       useEffect(() => {
         contarLibros();
         console.log(`La biblioteca contiene ${cantidad} libro(s).`);
-        }, [resumen]);
+        }, [biblioteca2]);
     
     return (
         <div className='resumen__contenido'>

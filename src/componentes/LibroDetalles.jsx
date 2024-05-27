@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -6,6 +6,7 @@ import {
   faCircleXmark,
   } from "@fortawesome/free-regular-svg-icons";
 import sin_portada from "../assets/img/sin_portada.png";
+import { contextoBiblioteca } from "../contextos/ProveedorLibros.jsx";
 import './LibroDetalles.css';
 
 const LibroDetalles = (props) => {
@@ -14,6 +15,8 @@ const LibroDetalles = (props) => {
     // Se desestructuran las propiedades del objeto JSON
     const { id, titulo, autor, portada, completado, sinopsis } = libroBuscado;
     const icono = completado ? faCircleCheck : faCircleXmark;
+
+    const { borrarLibro } = useContext(contextoBiblioteca);
 
     return (
       <Fragment>
@@ -44,9 +47,9 @@ const LibroDetalles = (props) => {
                 {sinopsis ? sinopsis : "No se ha especificado sinopsi."}
                 </td>
               </div>
-              <Link to='*'>
-                <input type='button' value='Eliminar de la biblioteca' className='boton boton--cancelar' />
-              </Link>
+              <input type='button' value='Eliminar de la biblioteca' className='boton boton--cancelar'
+                onClick={(evento) => { confirm(`¿Desea eliminar ${ titulo ? titulo : "Sin título" } de su biblioteca?`)
+                && borrarLibro(id); }}/>                
               <Link to='/'>
                 <input type='button' value='&lt; Atrás' className='boton boton--volver' />
               </Link>
@@ -61,5 +64,3 @@ const LibroDetalles = (props) => {
   };
   
   export default LibroDetalles;
-
- // {completado ? "Leído" : "No leído"}

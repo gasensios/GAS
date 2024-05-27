@@ -1,6 +1,8 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
+import { useParams } from "react-router-dom";
 import LibroDetalles from "../LibroDetalles.jsx";
-
+import { contextoBiblioteca } from "../../contextos/ProveedorLibros.jsx";
+ 
 const librodet = {
     id: "85f06643-f095-4a85-9d93-b9a78eb48r54",
     titulo: "Yo, robot",
@@ -12,12 +14,26 @@ const librodet = {
     };
 
 const Mostrar = () => {
+
+    const { buscarLibro } = useContext(contextoBiblioteca);
+
+    const { identificador } = useParams();
+    const libroFiltrado = buscarLibro(identificador);
+
+    const mostrarmensaje = () => {
+        return (
+            <div>
+                <p>Libro eliminado correctamente</p>
+            </div>
+        );
+    };
+
     return (
         <Fragment>
             <section className='mostrar'>
-                {librodet
-                    ? <LibroDetalles libroBuscado={librodet} />
-                    : "No se ha encontrado ningún libro."
+                { libroFiltrado.length
+                    ? <LibroDetalles libroBuscado={libroFiltrado[0]} />
+                    : mostrarmensaje()
                 }
             </section>
         </Fragment>

@@ -14,7 +14,7 @@ const Rutas = () => {
                 <Route path='/' element={<Inicio />} />
                 <Route path='/crear' element={<Crear />} />
                 <Route path='/buscar' element={<Buscar />} />
-                <Route path='/mostrar' element={<Mostrar />} />
+                <Route path='/mostrar/:identificador' element={<Mostrar />} />
                 <Route path='*' element={<Error />} />
             </Routes>
         </Fragment>
