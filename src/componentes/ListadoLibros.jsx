@@ -29,7 +29,6 @@ const ListadoLibros = () => {
   };
 
   const insertarLibro = (libroAInsertar) => {
-    //var copiaLibros = [...biblioteca.libros,libroAInsertar];
     var copiaLibros = [...biblioteca2, libroAInsertar];
     setBiblioteca(copiaLibros);
   };
