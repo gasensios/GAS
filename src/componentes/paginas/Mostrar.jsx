@@ -1,6 +1,7 @@
 import React, { Fragment, useContext } from "react";
 import { useParams } from "react-router-dom";
 import LibroDetalles from "../LibroDetalles.jsx";
+import MostrarMensaje from "./Mensaje.jsx";
 import { contextoBiblioteca } from "../../contextos/ProveedorLibros.jsx";
  
 const librodet = {
@@ -20,20 +21,12 @@ const Mostrar = () => {
     const { identificador } = useParams();
     const libroFiltrado = buscarLibro(identificador);
 
-    const mostrarmensaje = () => {
-        return (
-            <div>
-                <p>Libro eliminado correctamente</p>
-            </div>
-        );
-    };
-
     return (
         <Fragment>
             <section className='mostrar'>
                 { libroFiltrado.length
                     ? <LibroDetalles libroBuscado={libroFiltrado[0]} />
-                    : mostrarmensaje()
+                    : <MostrarMensaje />
                 }
             </section>
         </Fragment>

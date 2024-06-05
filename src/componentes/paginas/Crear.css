@@ -8,6 +8,11 @@
     font-size: 2em;
 }
 
+.crear__errores {
+    color: green;
+    font-size: 2em;
+}
+
 .form {
    margin: 20px 0 0;
 }
