@@ -1,10 +1,20 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
+import BuscarFormulario from "./BuscarFormulario";
+import BuscarResultado from "./BuscarResultado";
 
 const Buscar = () => {
+
+    const [URL, setURL] = useState("");
+
+    const cambiarURL = (nuevaURL) => {
+        setURL(nuevaURL);
+        };
+
     return (
         <Fragment>
             <section className='buscar'>
-                <h2 className='buscar__titulo'>Buscar libro</h2>
+                <BuscarFormulario url={URL} cambiarURL={cambiarURL} />
+                {URL && <BuscarResultado endpoint={URL} />}
             </section>
         </Fragment>
     );

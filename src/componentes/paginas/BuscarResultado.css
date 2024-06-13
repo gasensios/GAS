@@ -1,0 +1,66 @@
+.libros__listado {
+    display: flex; /* Activar flexbox mode para la lista */
+    flex-direction: row; /* Establecer la dirección de los objetos (horizontal) */
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias filas */
+    justify-content: space-around;
+    align-items: baseline; /* Alinear elementos verticalmente en el centro */
+    padding: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.buscar {
+    padding: 30px 0;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.buscar__resultado {
+    display: grid;
+    grid-template-columns: 33.333% 33.333% 33.333%;
+    justify-items: center;
+    width: 100%;
+}
+
+.buscar__resumen {
+    margin: 20px 0;
+}
+
+.form__input--search {
+    width: calc(100% - 152px);
+    margin: 0 10px 0 0;
+}
+
+.boton--buscar {
+    background-color: var(--primary-color);
+}
+
+.buscar__titulo {
+    font-size: 2em;
+    margin: 0 0 10px;
+}
+
+
+@media (max-width: 992px) {
+    .buscar__resultado {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media (max-width: 756px) {
+    .buscar {
+        width: 95%;
+    }
+
+    .form__input--search {
+        width: 100%;
+        margin: 0 0 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .buscar__resultado {
+        grid-template-columns: 100%;
+    }
+}

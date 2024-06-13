@@ -56,6 +56,11 @@ const ProveedorLibros = (props) => {
         }
     };
 
+    const adecuarURL = (url) => {
+        return `https://openlibrary.org/search.json?q=${url
+        .trim().replace(/\s/g, "+") }&fields=key,title,author_name,cover_i,language,first_sentence,number_of_pages_median&language=spa`;
+        };
+
     useEffect(() => {
       inicializarBiblioteca(); // Se cargan los datos en el estado.
     }, []);
@@ -69,6 +74,7 @@ const ProveedorLibros = (props) => {
         insertarLibro,
         buscarLibro,
         borrarLibro,
+        adecuarURL,
      };
 
     return (
