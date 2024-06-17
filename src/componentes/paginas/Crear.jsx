@@ -59,7 +59,7 @@ const Crear = () => {
             await insertarLibro(libro); // Se realiza la inserción tras la confirmación
             retornar('/'); // Redirigir a la pagina Principal, tras la inserción
           } catch (error) {
-            console.error("Error creando libro:", error);
+            <MostrarErrores error />
           }
         }
       };
